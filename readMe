@@ -1,0 +1,7 @@
+Dependencies :
+    - express
+    - mongoose
+    - node  
+        - concurrently(in global file )
+        - nodemon (To start the index.js in the backend everytime when it gets edited )
+    - react(frontend )  

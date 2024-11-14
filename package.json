@@ -4,13 +4,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "frontend " : " cd frontend && npm start", 
-    "backend " : " cd backend && npm start",  
-    "start": "concurrently \"npm run frontend\" \"npm run backend\""
-
+    "frontend": " cd frontend && npm start",
+    "backend": " cd backend && npm start",
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.1.0"
+  }
 }
