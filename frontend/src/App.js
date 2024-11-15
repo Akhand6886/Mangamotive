@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Card, Navbar, Nav } from 'react-bootstrap';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LandingPage from './components/LandingPage/LandingPage';
+import LandingPage from '../src/components/LandingPage/LandingPage';
 
 function App() {
     return (
@@ -16,3 +16,4 @@ function App() {
 }
 
 export default App;
+

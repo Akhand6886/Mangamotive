@@ -9,7 +9,7 @@
 .hero {
     text-align: center;
     padding: 50px;
-    background-image: url('/path-to-image.jpg'); /* Update with actual path */
+    background-image: url('Mangamotive/frontend/public/logo512.png'); /* Update with actual path */
     background-size: cover;
 }
 .new-trendy {
