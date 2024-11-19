@@ -1,17 +1,18 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const cors = require('cors');
-const dotenv = require('dotenv');
-const connectDB = require('./library/database');
-const todoRoutes = require('./routers/todoRoutes');
-
-dotenv.config();
+const episodeRoutes = require('./routes/episodes');
 
 const app = express();
+const PORT = process.env.PORT || 5001;
+const MONGODB_URI = 'your_mongodb_connection_string';
+
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err));
+
+app.use(cors());
 app.use(express.json());
+app.use('/api', episodeRoutes);
 
-connectDB();
-
-// Use the trending API route
-//app.use('/api', trendingRoutes);
-
-app.listen(5001, () => console.log("Backend is running on port 5001"));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
