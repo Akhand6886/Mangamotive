@@ -1,17 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import EpisodesPage from './components/EpisodesPage';
-import EpisodeDetails from './components/EpisodeDetails';
+import LandingPage from './pages/LandingPage';
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={EpisodesPage} />
-        <Route path="/episodes/:id" component={EpisodeDetails} />
-      </Switch>
-    </Router>
+    <div className="App">
+      <LandingPage />
+    </div>
+    
   );
-};
+}
 
 export default App;
